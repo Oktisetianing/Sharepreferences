@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class SharedPreferensactActivity extends AppCompatActivity {
 
@@ -43,6 +45,26 @@ public class SharedPreferensactActivity extends AppCompatActivity {
         startActivity(i);
         finishAffinity(); 
     }
+    public void login(){
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //ambil value dari edittex
+                final String username = etUsername.getText().toString();
+                final String password = etPassword.getText().toString();
 
+                pbLogin.setVisibility(View.VISIBLE);
+                ivLogin.setVisibility(View.GONE);
+
+                if (username.isEmpty() || password.isEmpty()){
+                    pbLogin.setVisibility(View.GONE);
+                    ivLogin.setVisibility(View.VISIBLE);
+                    Toast.makeText(SharedPreferensactActivity.this,
+                            "Username dan password tidak boleh kosong",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
 
 }

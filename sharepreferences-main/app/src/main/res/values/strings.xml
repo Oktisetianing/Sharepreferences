@@ -5,5 +5,5 @@
         <item>Manajemen Informatika 2</item>
         <item>Manajemen Informatika 3</item>
     </string-array>
-        <string name="shared_prev">/>
+        <string name="shared_prev"/>
 </resources>
