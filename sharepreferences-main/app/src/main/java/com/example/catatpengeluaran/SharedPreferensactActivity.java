@@ -39,6 +39,8 @@ public class SharedPreferensactActivity extends AppCompatActivity {
             btnlogin = findViewById(R.id.btnLogin);
             pbLogin = findViewById(R.id.pblogin);
             ivLogin = findViewById(R.id.login);
+
+            login();
         }
     }
     public  void startHomeUI(){
