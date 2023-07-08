@@ -27,6 +27,13 @@ public class SharedPreferensactActivity extends AppCompatActivity {
         if (sharePrevManager.getIsLogin()){
             //kondisi jika user sudah log in
             startHomeUI();
+        } else {
+            //kondisi juka user belum login
+            etUsername = findViewById(R.id.et_nama);
+            etPassword = findViewById(R.id.et_password);
+            btnlogin = findViewById(R.id.btnLogin);
+            pbLogin = findViewById(R.id.pblogin);
+            ivLogin = findViewById(R.id.login);
         }
     }
     public  void startHomeUI(){
